@@ -1,0 +1,90 @@
+# ==============================================================================
+# .gitignore - Proyecto Final Data Science (Fundación YPF)
+# ==============================================================================
+
+# --- Herramientas de Extracción y Archivos Relacionados ---
+# Ignora el script de extracción, la carpeta tools/ y todos los archivos de texto extraídos
+tools/
+tools/extractor/
+**/extractor/
+extract_text.py
+*.txt
+*.tmp
+
+# --- Entornos Virtuales y Dependencias ---
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Python & Caché ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Jupyter Notebooks & IPython ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*-checkpoint.ipynb
+.ipython/
+
+# --- Modelos y Checkpoints de Entrenamiento (Archivos Pesados) ---
+# Descomentar si se generan modelos binarios pesados que no deban commitearse
+*.pkl
+*.joblib
+*.h5
+*.model
+*.pth
+*.pt
+*.onnx
+
+# --- Datos y Archivos Temporales de Gran Tamaño ---
+# Nota: La guía del curso pide incluir el dataset final en el repo si es liviano (<100MB).
+# Se ignoran archivos comprimidos o volcados temporales:
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.log
+
+# --- Variables de Entorno y Credenciales ---
+.env
+.env.*
+secrets.json
+
+# --- Configuraciones de Editores e IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Archivos de Sistema Operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+
+.obsidian
+
