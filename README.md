@@ -4,15 +4,13 @@
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-orange.svg?logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Status](https://img.shields.io/badge/Estado-En_Desarrollo-yellow.svg)]()
-[![Tutora](https://img.shields.io/badge/Tutora-Belén-purple.svg)]()
 
 ---
 
 ## 👥 Integrantes del Grupo 07
-* **Integrante 1:** [Nombre y Apellido] - [@usuario](https://github.com/)
-* **Integrante 2:** [Nombre y Apellido] - [@usuario](https://github.com/)
-* **Integrante 3:** [Nombre y Apellido] - [@usuario](https://github.com/)
-* **Integrante 4:** [Nombre y Apellido] - [@usuario](https://github.com/)
+* **Integrante 1:** [Emilia Munaretto] - [@usuario](https://github.com/emiliamunaretto-max)
+* **Integrante 2:** [Santiago Tuñón] - [@usuario](https://github.com/santiagotunon-prog)
+* **Integrante 3:** [Ernesto Cafre] - [@usuario](https://github.com/ErnestoCafre/)
 
 ---
 
