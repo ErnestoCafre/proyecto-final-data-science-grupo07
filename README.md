@@ -8,9 +8,9 @@
 ---
 
 ## 👥 Integrantes del Grupo 07
-* **Integrante 1:** [Emilia Munaretto] - [@usuario](https://github.com/emiliamunaretto-max)
-* **Integrante 2:** [Santiago Tuñón] - [@usuario](https://github.com/santiagotunon-prog)
-* **Integrante 3:** [Ernesto Cafre] - [@usuario](https://github.com/ErnestoCafre/)
+* **Integrante 1:** Emilia Munaretto - [@emiliamunaretto-max](https://github.com/emiliamunaretto-max)
+* **Integrante 2:** Santiago Tuñón - [@santiagotunon-prog](https://github.com/santiagotunon-prog)
+* **Integrante 3:** Ernesto Cafre - [@ErnestoCafre](https://github.com/ErnestoCafre)
 
 ---
 
@@ -40,11 +40,11 @@ Este repositorio implementa una arquitectura híbrida que vincula las pre-entreg
 
 | Hito Académico | Etapa del Pipeline | Directorio | Estado |
 | :--- | :--- | :--- | :---: |
-| **1ª Pre-entrega** (Clase 5/7) | Desafíos de Notebooks 5 y 7 | [`notebooks/00_pre_entrega_1_desafios/`](file:///c:/Users/Ernes/Git-Cursos/FundacionYPF/proyecto-final-datascience-grupo07/notebooks/00_pre_entrega_1_desafios) | 🟡 Pendiente |
-| **2ª Pre-entrega** (Clase 10) | Análisis Exploratorio de Datos (AED) | [`notebooks/01_pre_entrega_2_aed/`](file:///c:/Users/Ernes/Git-Cursos/FundacionYPF/proyecto-final-datascience-grupo07/notebooks/01_pre_entrega_2_aed) | 🟡 Pendiente |
-| **3ª Pre-entrega** (Clase 18/19) | Modelo de Aprendizaje Supervisado | [`notebooks/02_pre_entrega_3_supervisado/`](file:///c:/Users/Ernes/Git-Cursos/FundacionYPF/proyecto-final-datascience-grupo07/notebooks/02_pre_entrega_3_supervisado) | 🟡 Pendiente |
-| **4ª Pre-entrega** (Clase 25) | Modelo No Supervisado (Clustering) | [`notebooks/03_pre_entrega_4_no_supervisado/`](file:///c:/Users/Ernes/Git-Cursos/FundacionYPF/proyecto-final-datascience-grupo07/notebooks/03_pre_entrega_4_no_supervisado) | 🟡 Pendiente |
-| **Entrega Final** | Exposición Oral de 15 minutos | [`presentacion/`](file:///c:/Users/Ernes/Git-Cursos/FundacionYPF/proyecto-final-datascience-grupo07/presentacion) | 🟡 Pendiente |
+| **1ª Pre-entrega** (Clase 5/7) | Desafíos de Notebooks 5 y 7 | [`notebooks/00_pre_entrega_1_desafios/`](notebooks/00_pre_entrega_1_desafios/) | 🟡 Pendiente |
+| **2ª Pre-entrega** (Clase 10) | Análisis Exploratorio de Datos (AED) | [`notebooks/01_pre_entrega_2_aed/`](notebooks/01_pre_entrega_2_aed/) | 🟡 Pendiente |
+| **3ª Pre-entrega** (Clase 18/19) | Modelo de Aprendizaje Supervisado | [`notebooks/02_pre_entrega_3_supervisado/`](notebooks/02_pre_entrega_3_supervisado/) | 🟡 Pendiente |
+| **4ª Pre-entrega** (Clase 25) | Modelo No Supervisado (Clustering) | [`notebooks/03_pre_entrega_4_no_supervisado/`](notebooks/03_pre_entrega_4_no_supervisado/) | 🟡 Pendiente |
+| **Entrega Final** | Exposición Oral de 15 minutos | [`presentacion/`](presentacion/) | 🟡 Pendiente |
 
 ---
 
@@ -95,4 +95,4 @@ proyecto-final-datascience-grupo07/
 ---
 
 > [!TIP]  
-> Para consultar el detalle completo de los criterios pedagógicos, consulta la [Guía del Proyecto](file:///c:/Users/Ernes/Git-Cursos/FundacionYPF/proyecto-final-datascience-grupo07/docs/GUIA_PROYECTO.md).
+> Para consultar el detalle completo de los criterios pedagógicos, consulta la [Guía del Proyecto](docs/GUIA_PROYECTO.md).
