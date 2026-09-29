@@ -15,13 +15,12 @@
 ---
 
 ## 📝 Resumen Ejecutivo del Proyecto
-> *(Requerimiento de rúbrica: máximo un párrafo por ítem)*
 
 ### 1. Resumen del Proyecto
-> *[Breve descripción general del proyecto: contexto de la problemática que se busca abordar, relevancia del sector energético o del dominio elegido, y alcance del análisis desarrollado de punta a punta].*
+> El proyecto aborda el análisis operativo y de eficiencia en intervenciones de estimulación hidráulica (*fracking*) en pozos de hidrocarburos de Argentina
 
 ### 2. Origen del Dataset
-> *[Descripción del origen de los datos: fuente de procedencia (BA Data, Kaggle, Google Dataset Search, etc.), método de obtención, enlace directo a la fuente y justificación de por qué resulta representativo para responder las preguntas del proyecto].*
+> Los datos provienen del portal oficial de datos abiertos de la República Argentina ([datos.gob.ar](https://datos.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv/resource/3d19ba75-3a93-597a-b4f2-49be87b75358)), provisto por la Secretaría de Energía de la Nación bajo el registro *"Datos de fractura de pozos de hidrocarburos"*. El conjunto abarca un histórico representativo de 4.890 declaraciones juradas presentadas por empresas operadoras (YPF, Pampa Energía, etc.).
 
 ### 3. Objetivo Propuesto
 > *[Definición clara y concisa de la meta principal del estudio: qué variable clave se desea analizar/predecir, qué hipótesis se plantean y qué valor práctico o de negocio aporta la solución].*
@@ -40,8 +39,8 @@ Este repositorio implementa una arquitectura híbrida que vincula las pre-entreg
 
 | Hito Académico | Etapa del Pipeline | Directorio | Estado |
 | :--- | :--- | :--- | :---: |
-| **1ª Pre-entrega** (Clase 5/7) | Desafíos de Notebooks 5 y 7 | [`notebooks/00_pre_entrega_1_desafios/`](notebooks/00_pre_entrega_1_desafios/) | 🟡 Pendiente |
-| **2ª Pre-entrega** (Clase 10) | Análisis Exploratorio de Datos (AED) | [`notebooks/01_pre_entrega_2_aed/`](notebooks/01_pre_entrega_2_aed/) | 🟡 Pendiente |
+| **1ª Pre-entrega** (Clase 5/7) | Desafíos de Notebooks 5 y 7 | [`notebooks/00_pre_entrega_1_desafios/`](notebooks/00_pre_entrega_1_desafios/) | 🟢 Completada |
+| **2ª Pre-entrega** (Clase 10) | Análisis Exploratorio de Datos (AED) | [`notebooks/01_pre_entrega_2_aed/`](notebooks/01_pre_entrega_2_aed/) | 🟢 Completada |
 | **3ª Pre-entrega** (Clase 18/19) | Modelo de Aprendizaje Supervisado | [`notebooks/02_pre_entrega_3_supervisado/`](notebooks/02_pre_entrega_3_supervisado/) | 🟡 Pendiente |
 | **4ª Pre-entrega** (Clase 25) | Modelo No Supervisado (Clustering) | [`notebooks/03_pre_entrega_4_no_supervisado/`](notebooks/03_pre_entrega_4_no_supervisado/) | 🟡 Pendiente |
 | **Entrega Final** | Exposición Oral de 15 minutos | [`presentacion/`](presentacion/) | 🟡 Pendiente |
@@ -69,24 +68,21 @@ proyecto-final-datascience-grupo07/
 ├── presentacion/                          # Material de apoyo para la defensa oral (15 min)
 │   └── README.md                          # Enlace a Canva/Slides y pautas de Storytelling
 │
-├── docs/                                  # Documentación y lineamientos del curso
-│   ├── EnergIA Digital Data Science.pdf   # Guía original en PDF
-│   └── GUIA_PROYECTO.md                   # Guía interactiva en Markdown con fechas y checklist
-│
-└── tools/                                 # Herramientas de soporte desacopladas
-    └── extractor/                         # Utilidad para extracción de texto en UTF-8
+└── docs/                                  # Documentación y lineamientos del curso
+    ├── EnergIA Digital Data Science.pdf   # Guía original en PDF
+    └── GUIA_PROYECTO.md                   # Guía interactiva en Markdown con fechas y checklist
 ```
 
 ---
 
 ## ✅ Checklist de Entrega Final
 
-- [ ] Grupo informado a la tutora Belén.
-- [ ] Tema y dataset publicados en el foro del aula virtual.
-- [ ] Repositorio estructurado y ambiente de trabajo configurado.
+- [x] Grupo informado al equipo docente.
+- [x] Tema y dataset publicados en el foro del aula virtual.
+- [x] Repositorio estructurado y ambiente de trabajo configurado.
 - [ ] Resumen ejecutivo del `README.md` completado (los 5 puntos requeridos).
-- [ ] Dataset incluido en `data/raw/`.
-- [ ] Notebook de AED (Pre-entrega 2) reproducible.
+- [x] Dataset incluido en `data/raw/`.
+- [x] Notebook de AED (Pre-entrega 2) reproducible.
 - [ ] Notebook de Modelo Supervisado (Pre-entrega 3) con métricas y tuning.
 - [ ] Notebook de Modelo No Supervisado (Pre-entrega 4) con análisis de clusters.
 - [ ] Presentación oral armada (diapositivas en `presentacion/`).

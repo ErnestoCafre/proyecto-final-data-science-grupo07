@@ -7,7 +7,7 @@ Este directorio está destinado a almacenar el material visual y los recursos co
 ## 🎯 Pautas de la Exposición Oral
 * **Duración:** Máximo **15 minutos** de exposición por grupo.
 * **Herramientas sugeridas:** Canva, Google Slides o PowerPoint.
-* **Audiencia:** Tutora Belén y compañeros de comisión.
+* **Audiencia:** Equipo docente y compañeros de comisión.
 
 ---
 

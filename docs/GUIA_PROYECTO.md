@@ -1,6 +1,5 @@
 # 🚀 Proyecto Final: Guía para Estudiantes
 ### **EnergIA Digital — Data Science | Fundación YPF**
-> **Tutora:** Belén  
 > **Modalidad:** Trabajo grupal colaborativo
 
 ---
@@ -96,7 +95,7 @@ Para la obtención del certificado es indispensable adjuntar en el aula virtual 
 
 Antes de enviar la entrega definitiva, verifica el cumplimiento de cada uno de los siguientes puntos:
 
-- [ ] Grupo de trabajo conformado e informado a la tutora Belén.
+- [ ] Grupo de trabajo conformado e informado al equipo docente.
 - [ ] Tema y dataset elegidos y validados en el foro del aula virtual.
 - [ ] Repositorio de GitHub inicializado y entorno de desarrollo configurado.
 - [ ] `README.md` principal completo (descripción, objetivos, hallazgos y modelos).

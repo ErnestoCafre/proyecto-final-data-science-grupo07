@@ -2,14 +2,9 @@
 # .gitignore - Proyecto Final Data Science (Fundación YPF)
 # ==============================================================================
 
-# --- Herramientas de Extracción y Archivos Relacionados ---
-# Ignora el script de extracción, la carpeta tools/ y todos los archivos de texto extraídos
-tools/
-tools/extractor/
-**/extractor/
-extract_text.py
-*.txt
+# --- Archivos Temporales ---
 *.tmp
+*.bak
 
 # --- Entornos Virtuales y Dependencias ---
 venv/
