@@ -23,13 +23,13 @@
 > Los datos provienen del portal oficial de datos abiertos de la República Argentina ([datos.gob.ar](https://datos.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv/resource/3d19ba75-3a93-597a-b4f2-49be87b75358)), provisto por la Secretaría de Energía de la Nación bajo el registro *"Datos de fractura de pozos de hidrocarburos"*. El conjunto abarca un histórico representativo de 4.890 declaraciones juradas presentadas por empresas operadoras (YPF, Pampa Energía, etc.).
 
 ### 3. Objetivo Propuesto
-> *[Definición clara y concisa de la meta principal del estudio: qué variable clave se desea analizar/predecir, qué hipótesis se plantean y qué valor práctico o de negocio aporta la solución].*
+> Anticipar la demanda de insumos de cada fractura para planificar la logística de arena, que se trae desde Entre Ríos o se importa y recorre más de 1.000 km hasta el pozo. Para eso planteamos dos preguntas: **(a)** ¿se puede predecir la arena total que requerirá una fractura (`arena_total_tn`) a partir de variables conocidas al diseñarla (etapas, rama horizontal, agua, presión, potencia, formación)? y **(b)** si agrupamos los registros sólo por sus medidas operativas, sin mirar la geología, ¿aparecen perfiles naturales de pozo (chicos, medianos y grandes) útiles para dimensionar arena, agua y equipos?
 
 ### 4. Hallazgos del Análisis Exploratorio (AED)
-> *[Principales descubrimientos obtenidos en la etapa exploratoria: correlaciones destacadas, patrones o tendencias temporales, anomalías identificadas y conclusiones clave que guiaron la etapa de modelado].*
+> La actividad está muy concentrada: el 83,6% de los registros es de la cuenca Neuquina, el 61,4% de la formación Vaca Muerta y el 45,5% fue informado por YPF. La arena tiene una distribución bimodal (mediana de 20 tn en convencionales contra 6.601 tn en no convencionales) y está fuertemente correlacionada con la cantidad de etapas (r = 0,98), la longitud de la rama horizontal (0,96) y el agua inyectada (0,92). En los pozos horizontales se ve una clara evolución tecnológica: la rama mediana pasó de unos 900 m en 2012 a unos 3.000 m en 2025, y la arena mediana de 1.840 tn a 11.700 tn. En la limpieza tratamos como faltantes las presiones imposibles (más de 20.000 psi o menos de 1.000 psi) y las potencias fuera de rango, y las imputamos con la mediana de su tipo y subtipo de reservorio. También recalculamos 67 ramas horizontales en 0 o menores a 50 m multiplicando la cantidad de etapas por el espaciado mediano de su cuenca. En todos los casos dejamos columnas que marcan qué valores se imputaron. También detectamos que los 235 registros con agua en 0 (232 de Tecpetrol) son datos no informados, eliminamos 2 registros de GeoPark con arena fuera de escala y corregimos fechas invertidas. El dataset limpio (4.888 registros) quedó en `data/processed/pozos_fractura_limpio.csv`.
 
 ### 5. Detalle de los Modelos Ajustados
-> *[Síntesis técnica de los modelos entrenados: algoritmos supervisados aplicados (regresión/clasificación), métricas de rendimiento alcanzadas tras la optimización de hiperparámetros y conclusiones cualitativas derivadas del clustering no supervisado].*
+> **Supervisado (regresión de `arena_total_tn`):** con `Pipeline` + `ColumnTransformer`, una separación 80/20 y validación cruzada de 5 pliegues comparamos un `DummyRegressor`, una Regresión Lineal y un Random Forest. Después optimizamos el Random Forest con Optuna (40 pruebas, minimizando el RMSE de validación cruzada). En test, el modelo final obtuvo **MAE = 299 tn, RMSE = 561 tn y R² = 0,988**, contra MAE = 498 tn y R² = 0,974 de la regresión lineal: un 40% menos de error típico, equivalente a cerca del 6% de la arena promedio. Las variables más influyentes fueron la cantidad de etapas, el agua inyectada y la longitud de la rama. **No supervisado (clustering):** aplicamos K-Means sobre 6 variables operativas transformadas con `log1p` + `StandardScaler` (4.585 registros con agua informada) y elegimos K = 3 por el método del codo y la silueta (0,621). Los tres perfiles fueron: *chicos* (20%, mayormente verticales, mediana de 33 tn de arena, concentrados en las cuencas Austral y Golfo San Jorge), *medianos* (24%, unas 800 tn, pozos tight y primeros pozos verticales de Vaca Muerta) y *grandes* (56%, rama de unos 2.500 m, 41 etapas y unas 9.300 tn, 99,7% shale neuquino). Contrastados con el subtipo de reservorio, que no participó del agrupamiento, obtuvieron una pureza de 0,819 y un ARI de 0,632: el perfil operativo reproduce en gran medida la geología.
 
 ---
 
@@ -41,8 +41,8 @@ Este repositorio implementa una arquitectura híbrida que vincula las pre-entreg
 | :--- | :--- | :--- | :---: |
 | **1ª Pre-entrega** (Clase 5/7) | Desafíos de Notebooks 5 y 7 | [`notebooks/00_pre_entrega_1_desafios/`](notebooks/00_pre_entrega_1_desafios/) | 🟢 Completada |
 | **2ª Pre-entrega** (Clase 10) | Análisis Exploratorio de Datos (AED) | [`notebooks/01_pre_entrega_2_aed/`](notebooks/01_pre_entrega_2_aed/) | 🟢 Completada |
-| **3ª Pre-entrega** (Clase 18/19) | Modelo de Aprendizaje Supervisado | [`notebooks/02_pre_entrega_3_supervisado/`](notebooks/02_pre_entrega_3_supervisado/) | 🟡 Pendiente |
-| **4ª Pre-entrega** (Clase 25) | Modelo No Supervisado (Clustering) | [`notebooks/03_pre_entrega_4_no_supervisado/`](notebooks/03_pre_entrega_4_no_supervisado/) | 🟡 Pendiente |
+| **3ª Pre-entrega** (Clase 18/19) | Modelo de Aprendizaje Supervisado | [`notebooks/02_pre_entrega_3_supervisado/`](notebooks/02_pre_entrega_3_supervisado/) | 🟢 Completada |
+| **4ª Pre-entrega** (Clase 25) | Modelo No Supervisado (Clustering) | [`notebooks/03_pre_entrega_4_no_supervisado/`](notebooks/03_pre_entrega_4_no_supervisado/) | 🟢 Completada |
 | **Entrega Final** | Exposición Oral de 15 minutos | [`presentacion/`](presentacion/) | 🟡 Pendiente |
 
 ---
@@ -50,7 +50,7 @@ Este repositorio implementa una arquitectura híbrida que vincula las pre-entreg
 ## 📂 Estructura del Repositorio
 
 ```text
-proyecto-final-datascience-grupo07/
+proyecto-final-data-science-grupo07/
 │
 ├── .gitignore                             # Filtros para cachés, temporales y modelos pesados
 ├── README.md                              # Ficha técnica y resumen ejecutivo (Rúbrica oficial)
@@ -80,11 +80,11 @@ proyecto-final-datascience-grupo07/
 - [x] Grupo informado al equipo docente.
 - [x] Tema y dataset publicados en el foro del aula virtual.
 - [x] Repositorio estructurado y ambiente de trabajo configurado.
-- [ ] Resumen ejecutivo del `README.md` completado (los 5 puntos requeridos).
+- [x] Resumen ejecutivo del `README.md` completado (los 5 puntos requeridos).
 - [x] Dataset incluido en `data/raw/`.
 - [x] Notebook de AED (Pre-entrega 2) reproducible.
-- [ ] Notebook de Modelo Supervisado (Pre-entrega 3) con métricas y tuning.
-- [ ] Notebook de Modelo No Supervisado (Pre-entrega 4) con análisis de clusters.
+- [x] Notebook de Modelo Supervisado (Pre-entrega 3) con métricas y tuning.
+- [x] Notebook de Modelo No Supervisado (Pre-entrega 4) con análisis de clusters.
 - [ ] Presentación oral armada (diapositivas en `presentacion/`).
 - [ ] Enlace al repositorio cargado en el aula virtual para la certificación.
 
